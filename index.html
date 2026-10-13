@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11151a">
+  <meta name="description" content="A photography-inspired responsive glass sidebar built with HTML, CSS and JavaScript.">
+
+  <title>Raj Photography</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  <main class="scene" id="home">
+    <div class="scene__image" aria-hidden="true"></div>
+    <div class="scene__shade" aria-hidden="true"></div>
+
+    <button
+      class="menu-trigger"
+      id="menuOpen"
+      type="button"
+      aria-label="Open navigation"
+      aria-controls="sidebar"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+
+    <aside
+      class="sidebar"
+      id="sidebar"
+      aria-label="Main navigation"
+      aria-hidden="true"
+      inert
+    >
+      <div class="sidebar__top">
+        <a class="brand" href="#home" aria-label="Apna College home">
+          <span class="brand__mark">
+            <i class="fa-solid fa-aperture" aria-hidden="true"></i>
+          </span>
+
+          <span class="brand__copy">
+            <strong>Raj Photography</strong>
+            <small>Capture <span>·</span> Learn <span>·</span> Grow</small>
+          </span>
+        </a>
+
+        <button
+          class="icon-button close-button"
+          id="menuClose"
+          type="button"
+          aria-label="Close navigation"
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <p class="nav-caption">EXPLORE</p>
+
+      <nav class="navigation" aria-label="Explore">
+        <a class="nav-link is-active" href="#home" aria-current="page">
+          <i class="fa-solid fa-house" aria-hidden="true"></i>
+          <span>Home</span>
+        </a>
+
+        <a class="nav-link" href="#gallery">
+          <i class="fa-regular fa-images" aria-hidden="true"></i>
+          <span>Gallery</span>
+        </a>
+
+        <a class="nav-link" href="#shortcuts">
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          <span>Shortcuts</span>
+        </a>
+
+        <a class="nav-link" href="#exhibits">
+          <i class="fa-solid fa-film" aria-hidden="true"></i>
+          <span>Exhibits</span>
+        </a>
+
+        <a class="nav-link" href="#events">
+          <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+          <span>Events</span>
+        </a>
+
+        <a class="nav-link" href="#store">
+          <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+          <span>Store</span>
+        </a>
+
+        <a class="nav-link" href="#contact">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>Contact</span>
+        </a>
+
+        <a class="nav-link" href="#feedback">
+          <i class="fa-regular fa-message" aria-hidden="true"></i>
+          <span>Feedback</span>
+        </a>
+      </nav>
+
+      <div class="sidebar__footer">
+        <p class="nav-caption">FIND US ELSEWHERE</p>
+
+        <div class="social-links" aria-label="Social links">
+          <a href="https://www.facebook.com/"
+             aria-label="Facebook" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://x.com/"
+             aria-label="X" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://www.instagram.com/"
+             aria-label="Instagram" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://www.youtube.com/"
+             aria-label="YouTube" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <p class="sidebar__note">A little space for inspiration.</p>
+      </div>
+    </aside>
+
+    <section class="hero-copy" aria-live="polite">
+      <p class="eyebrow">
+        <span class="eyebrow__line"></span>
+        A space to see differently
+      </p>
+
+      <h1 id="heroTitle">Find your<br><em>perspective.</em></h1>
+
+      <p class="hero-copy__text" id="heroText">
+        Explore moments, places, and ideas worth keeping.
+      </p>
+
+      <a class="discover-link" href="#gallery" id="discoverLink">
+        Discover the gallery
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <div class="scene-meta">
+      <span id="sceneLabel">01 / HOME</span>
+      <span class="scene-meta__rule"></span>
+      <span>FIELD NOTES</span>
+    </div>
+
+    <p class="image-credit">Nature-inspired visual · Glass sidebar study</p>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
